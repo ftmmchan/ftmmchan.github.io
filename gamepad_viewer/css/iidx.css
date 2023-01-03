@@ -1,7 +1,7 @@
 #gamepads .controller {
   position: absolute;
   background-image: none;
-  background-color: rgba(20, 20, 20, 0.2);
+  background-color: rgba(20, 20, 20, 0.6);
   top: 0px;
   left: 0px;
   width: 1260px;
