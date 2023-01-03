@@ -1,0 +1,255 @@
+$red: #EA5352;
+$green: #6ADE72;
+$blue: #7CC2EF;
+$yellow: #FCFA90;
+$white: #EEEEEE;
+
+$bgcolor: rgba(20,20,20,0.2);
+
+$width: 960px;
+$height: 500px;
+
+$top1: 200px;
+$left1: 20px;
+$top2: 120px;
+$left2: $left1 + 40px;
+$top3: 0px;
+$left3: 230px;
+
+$top-mergin: -8px;
+$left-mergin: 468px;
+
+$button-height: 72px;
+$button-width: 72px;
+$button-border: 2px;
+$button-margin: 10px;
+
+
+$border-width: 2px;
+$border-radius: 50%;
+
+#gamepads{
+    .controller{
+        position: absolute;
+        background-image: none;
+        background-color: $bgcolor;
+        top: 0px;
+        left: 0px;
+        width: $width;
+        height: $height;
+        .abxy{
+            width: $width;
+            height: $height;
+            .button{
+                position: absolute;
+                background-image: none;
+                top: 0px;
+                left: 0px;
+                height: $button-height;
+                width: $button-width;
+                border: #ffffff $border-width solid;
+                border-radius: $border-radius;
+
+                &.pressed{
+                    margin-top: 0;
+                }
+
+                //left-white
+                &.a{
+                    left: $left1;
+                    top: $top1;
+                    border-color: $white;
+                    &.pressed{
+                        background-color: $white;
+                    }
+                }
+                //left-yellow
+                &.b{
+                    left: $left2;
+                    top: $top2;
+                    border-color: $yellow;
+                    &.pressed{
+                        background-color: $yellow;
+                    }
+                }
+                //left-blue
+                &.x{
+                    left: $left2 + ($button-width + $button-border * 2 + $button-margin);
+                    top: $top2;
+                    border-color: $blue;
+                    &.pressed{
+                        background-color: $blue;
+                    }
+                }
+                //right-blue
+                &.y{
+                    left: $left2 + ($button-width + $button-border * 2 + $button-margin) * 2;
+                    top: $top2;
+                    border-color: $blue;
+                    &.pressed{
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+        .bumpers{
+            position: absolute;
+            width: $width;
+            height: $height;
+            top: $top1 + $top-mergin;
+            left: $left1 + $left-mergin;
+            .bumper{
+                position: absolute;
+                width: $button-width;
+                height: $button-height;
+                border: #ffffff $border-width solid;
+                border-radius: $border-radius;
+                background-image: none;
+            
+            //right-white
+                &.left{
+                    opacity: 1;
+                    position: absolute;
+                    left: $left1 + ($button-width + $button-border * 2 + $button-margin) * 4;
+                    top: $top1;
+                    border-color: $white;
+                    &.pressed{
+                        background-color: $white;
+                    }
+                }
+                //right-green
+                &.right{
+                    opacity: 1;
+                    position: absolute;
+                    left: $left1 + ($button-width + $button-border * 2 + $button-margin) * 3;
+                    top: $top1;
+                    border-color: $green;
+                   &.pressed{
+                        background-color: $green;
+                    }
+                }
+            }
+            
+        }
+        
+        .triggers{
+            position: absolute;
+            width: $width;
+            height: $height;
+            top: $top1 + $top-mergin;
+            left: $left1 + $left-mergin;
+            .trigger{
+                background-image: none;
+            }
+            .trigger-button{
+                position: absolute;
+                width: $button-width;
+                height: $button-height;
+                top: $top1;
+                left: $left1;
+                border: #ffffff $border-width solid;
+                border-radius: $border-radius;
+
+                &.pressed{
+                    margin-top: 0;
+                }
+                //red
+                &.left{
+                    position: absolute;
+                    left: $left1 + ($button-width + $button-border * 2 + $button-margin) * 2;
+                    top: $top1;
+                    border-color: $red;
+                    &.pressed{
+                        background-color: $red;
+                    }
+                }
+                //left-green
+                &.right{
+                    position: absolute;
+                    left: $left1 + ($button-width + $button-border * 2 + $button-margin);
+                    top: $top1;
+                    border-color: $green;
+                    &.pressed{
+                        background-color: $green;
+                    }
+                }
+            }
+        }
+        .dpad{
+            position: absolute;
+            width: $width;
+            height: $height;
+            top: $top1 + $top-mergin;
+            left: $left1 + $left-mergin;
+            
+            .face{
+                position: absolute;
+                width: $button-width;
+                height: $button-height;
+                border: #ffffff $border-width solid;
+                border-radius: $border-radius;
+                background-image: none;
+
+                //right-yelow
+                &.up{
+                    opacity: 1;
+                    position: absolute;
+                    left: $left2 + ($button-width + $button-border * 2 + $button-margin) * 3;
+                    top: $top2;
+                    border-color: $yellow;
+                    &.pressed{
+                        background-color: $yellow;
+                    }
+                }
+                &.down{
+                    display: none;
+                }
+                &.left{
+                    display: none;
+                }
+                &.right{
+                    display: none;
+                }
+
+            }
+        }
+        
+            .arrows{
+            width: $width;
+            height: $height;
+                .back{
+                    opacity: 1;
+                    position: absolute;
+                    width: $button-width / 2;
+                    height: $button-height / 2;
+                    border: #ffffff $border-width solid;
+                    border-radius: $border-radius;
+                    background-image: none;
+                    left: $left3;
+                    &.pressed{
+                        background-color: $white;
+                    }
+                }
+                .start{
+                    opacity: 1;
+                    position: absolute;
+                    width: $button-width / 2;
+                    height: $button-height / 2;
+                    border: #ffffff $border-width solid;
+                    border-radius: $border-radius;
+                    background-image: none;
+                    top: $top3;
+                    left: $left3 - $button-margin - 40;
+                    &.pressed{
+                        background-color: $white;
+                    }
+                }
+            }
+            
+        
+        
+        .touchpad, .quadrant, .sticks, .wheels, .fstick,.template{
+            display: none;
+        }
+    }
+}

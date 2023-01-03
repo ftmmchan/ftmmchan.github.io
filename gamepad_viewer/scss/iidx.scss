@@ -1,0 +1,270 @@
+$red: #EA5352;
+$blue: #7CC2EF;
+$white: #EEEEEE;
+
+$bgcolor: rgba(20,20,20,0.2);
+
+$width: 1260px;
+$height: 550px;
+
+$top1: 250px;
+$left1: 460px;
+$top2: 145px;
+$left2: $left1 + 10px;
+$top3: 70px;
+$left3: 220px;
+
+$turntable-top: 135px;
+$turntable-left: 200px;
+$turntable-height: 200px;
+$turntable-width: 100px;
+
+$top-margin: -58px;
+$left-margin: 58px;
+
+$button-height: 80px;
+$button-width: 50px;
+$button-border: 2px;
+$button-margin: 20px;
+
+$button-height2: 30px;
+$button-width2: 30px;
+$border-radius2: 50%;
+
+$border-width: 2px;
+$border-radius: 0%;
+
+#gamepads{
+    .controller{
+        position: absolute;
+        background-image: none;
+        background-color: $bgcolor;
+        top: 0px;
+        left: 0px;
+        width: $width;
+        height: $height;
+        .abxy{
+            width: $width;
+            height: $height;
+            .button{
+                position: absolute;
+                background-image: none;
+                top: 0px;
+                left: 0px;
+                height: $button-height;
+                width: $button-width;
+                border: #ffffff $border-width solid;
+                border-radius: $border-radius;
+
+                &.pressed{
+                    margin-top: 0;
+                }
+
+                &.a{
+                    display: none;
+                }
+                //5-key
+                &.b{
+                    left: $left1 + ($button-width + $button-border * 2 + $button-margin) * 2;
+                    top: $top1;
+                    border-color: $white;
+                    &.pressed{
+                        background-color: $white;
+                    }
+                }
+                //3-key
+                &.x{
+                    left: $left1 + ($button-width + $button-border * 2 + $button-margin);
+                    top: $top1;
+                    border-color: $white;
+                    &.pressed{
+                        background-color: $white;
+                    }
+                }
+                //1-key
+                &.y{
+                    left: $left1;
+                    top: $top1;
+                    border-color: $white;
+                    &.pressed{
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+        .bumpers{
+            position: absolute;
+            width: $width;
+            height: $height;
+            top: $top1 + $top-margin;
+            left: $left1 + $left-margin;
+            .bumper{
+                position: absolute;
+                width: $button-width;
+                height: $button-height;
+                border: #ffffff $border-width solid;
+                border-radius: $border-radius;
+                background-image: none;
+            
+            //6-key
+                &.left{
+                    opacity: 1;
+                    position: absolute;
+                    left: $left2 + ($button-width + $button-border * 2 + $button-margin) * 2;
+                    top: $top2;
+                    border-color: $blue;
+                    &.pressed{
+                        background-color: $blue;
+                    }
+                }
+                &.right{
+                    display:none;
+                }
+            }
+            
+        }
+        
+        .triggers{
+            position: absolute;
+            width: $width;
+            height: $height;
+            top: $top1 + $top-margin;
+            left: $left1 + $left-margin;
+            .trigger{
+                background-image: none;
+            }
+            .trigger-button{
+                position: absolute;
+                width: $button-width;
+                height: $button-height;
+                top: $top2;
+                left: $left1;
+                border: #ffffff $border-width solid;
+                border-radius: $border-radius;
+
+                &.pressed{
+                    margin-top: 0;
+                }
+                //2-key
+                &.left{
+                    position: absolute;
+                    left: $left2;
+                    top: $top2;
+                    border-color: $blue;
+                    &.pressed{
+                        background-color: $blue;
+                    }
+                }
+                //4-key
+                &.right{
+                    position: absolute;
+                    left: $left2 + ($button-width + $button-border * 2 + $button-margin);
+                    top: $top2;
+                    border-color: $blue;
+                    &.pressed{
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+        .dpad{
+            position: absolute;
+            width: $width;
+            height: $height;
+            top: $top1 + $top-margin;
+            left: $left1 + 27px;
+            
+            .face{
+                position: absolute;
+                width: $button-width;
+                height: $button-height;
+                border: #ffffff $border-width solid;
+
+                background-image: none;
+
+                //turntable-r
+                &.up{
+                    opacity: 1;
+                    position: absolute;
+                    left: $turntable-left + 100px;
+                    top: $turntable-top;
+                    height:$turntable-height;
+                    width: $turntable-width;
+                    border-color: $white;
+                    border-radius: 0% 100% 100% 0% / 50% 50% 50% 50% ;
+                    &.pressed{
+                        background-color: $red;
+                    }
+                }
+                //turntable-l
+                &.down{
+                    opacity: 1;
+                    position: absolute;
+                    left: $turntable-left;
+                    top: $turntable-top;
+                    height:$turntable-height;
+                    width: $turntable-width;
+                    border-color: $white;
+                    border-radius: 100% 0% 0% 100% / 50% 50% 50% 50%  ;                    
+                    &.pressed{
+                        background-color: $red;
+                    }
+                }
+                //7-key
+                &.left{
+                    opacity: 1;
+                    position: absolute;
+                    left: $left1 + ($button-width + $button-border * 2 + $button-margin) * 3;
+                    top: $top1;
+                    border-color: $white;
+                    &.pressed{
+                        background-color: $white;
+                    }
+                }
+                &.right{
+                    display: none;
+                }
+
+            }
+        }
+        
+        .arrows{
+            width: $width;
+            height: $height;
+                .back{
+                    opacity: 1;
+                    position: absolute;
+                    width: $button-width2;
+                    height: $button-width2;
+                    border: #ffffff $border-width solid;
+                    border-radius: $border-radius2;
+                    background-image: none;
+                    top: $top3;
+                    left: $left1 + 173;
+                    &.pressed{
+                        background-color: $blue;
+                    }
+                }
+                .start{
+                    opacity: 1;
+                    position: absolute;
+                    width: $button-width2;
+                    height: $button-height2;
+                    border: #ffffff $border-width solid;
+                    border-radius: $border-radius2;
+                    background-image: none;
+                    top: $top3 + 50px;
+                    left: $left1 + 173;
+                    &.pressed{
+                        background-color: $blue;
+                    }
+                }
+            }
+            
+        
+        
+        .touchpad, .quadrant, .sticks, .wheels, .fstick,.template{
+            display: none;
+        }
+    }
+}

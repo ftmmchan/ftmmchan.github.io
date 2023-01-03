@@ -1,0 +1,201 @@
+#gamepads .controller {
+  position: absolute;
+  background-image: none;
+  background-color: rgba(20, 20, 20, 0.2);
+  top: 0px;
+  left: 0px;
+  width: 960px;
+  height: 500px;
+}
+#gamepads .controller .abxy {
+  width: 960px;
+  height: 500px;
+}
+#gamepads .controller .abxy .button {
+  position: absolute;
+  background-image: none;
+  top: 0px;
+  left: 0px;
+  height: 72px;
+  width: 72px;
+  border: #ffffff 2px solid;
+  border-radius: 50%;
+}
+#gamepads .controller .abxy .button.pressed {
+  margin-top: 0;
+}
+#gamepads .controller .abxy .button.a {
+  left: 20px;
+  top: 200px;
+  border-color: #EEEEEE;
+}
+#gamepads .controller .abxy .button.a.pressed {
+  background-color: #EEEEEE;
+}
+#gamepads .controller .abxy .button.b {
+  left: 60px;
+  top: 120px;
+  border-color: #FCFA90;
+}
+#gamepads .controller .abxy .button.b.pressed {
+  background-color: #FCFA90;
+}
+#gamepads .controller .abxy .button.x {
+  left: 146px;
+  top: 120px;
+  border-color: #7CC2EF;
+}
+#gamepads .controller .abxy .button.x.pressed {
+  background-color: #7CC2EF;
+}
+#gamepads .controller .abxy .button.y {
+  left: 232px;
+  top: 120px;
+  border-color: #7CC2EF;
+}
+#gamepads .controller .abxy .button.y.pressed {
+  background-color: #7CC2EF;
+}
+#gamepads .controller .bumpers {
+  position: absolute;
+  width: 960px;
+  height: 500px;
+  top: 192px;
+  left: 488px;
+}
+#gamepads .controller .bumpers .bumper {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border: #ffffff 2px solid;
+  border-radius: 50%;
+  background-image: none;
+}
+#gamepads .controller .bumpers .bumper.left {
+  opacity: 1;
+  position: absolute;
+  left: 364px;
+  top: 200px;
+  border-color: #EEEEEE;
+}
+#gamepads .controller .bumpers .bumper.left.pressed {
+  background-color: #EEEEEE;
+}
+#gamepads .controller .bumpers .bumper.right {
+  opacity: 1;
+  position: absolute;
+  left: 278px;
+  top: 200px;
+  border-color: #6ADE72;
+}
+#gamepads .controller .bumpers .bumper.right.pressed {
+  background-color: #6ADE72;
+}
+#gamepads .controller .triggers {
+  position: absolute;
+  width: 960px;
+  height: 500px;
+  top: 192px;
+  left: 488px;
+}
+#gamepads .controller .triggers .trigger {
+  background-image: none;
+}
+#gamepads .controller .triggers .trigger-button {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: 200px;
+  left: 20px;
+  border: #ffffff 2px solid;
+  border-radius: 50%;
+}
+#gamepads .controller .triggers .trigger-button.pressed {
+  margin-top: 0;
+}
+#gamepads .controller .triggers .trigger-button.left {
+  position: absolute;
+  left: 192px;
+  top: 200px;
+  border-color: #EA5352;
+}
+#gamepads .controller .triggers .trigger-button.left.pressed {
+  background-color: #EA5352;
+}
+#gamepads .controller .triggers .trigger-button.right {
+  position: absolute;
+  left: 106px;
+  top: 200px;
+  border-color: #6ADE72;
+}
+#gamepads .controller .triggers .trigger-button.right.pressed {
+  background-color: #6ADE72;
+}
+#gamepads .controller .dpad {
+  position: absolute;
+  width: 960px;
+  height: 500px;
+  top: 192px;
+  left: 488px;
+}
+#gamepads .controller .dpad .face {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border: #ffffff 2px solid;
+  border-radius: 50%;
+  background-image: none;
+}
+#gamepads .controller .dpad .face.up {
+  opacity: 1;
+  position: absolute;
+  left: 318px;
+  top: 120px;
+  border-color: #FCFA90;
+}
+#gamepads .controller .dpad .face.up.pressed {
+  background-color: #FCFA90;
+}
+#gamepads .controller .dpad .face.down {
+  display: none;
+}
+#gamepads .controller .dpad .face.left {
+  display: none;
+}
+#gamepads .controller .dpad .face.right {
+  display: none;
+}
+#gamepads .controller .arrows {
+  width: 960px;
+  height: 500px;
+}
+#gamepads .controller .arrows .back {
+  opacity: 1;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: #ffffff 2px solid;
+  border-radius: 50%;
+  background-image: none;
+  left: 230px;
+}
+#gamepads .controller .arrows .back.pressed {
+  background-color: #EEEEEE;
+}
+#gamepads .controller .arrows .start {
+  opacity: 1;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: #ffffff 2px solid;
+  border-radius: 50%;
+  background-image: none;
+  top: 0px;
+  left: 180px;
+}
+#gamepads .controller .arrows .start.pressed {
+  background-color: #EEEEEE;
+}
+#gamepads .controller .touchpad, #gamepads .controller .quadrant, #gamepads .controller .sticks, #gamepads .controller .wheels, #gamepads .controller .fstick, #gamepads .controller .template {
+  display: none;
+}
